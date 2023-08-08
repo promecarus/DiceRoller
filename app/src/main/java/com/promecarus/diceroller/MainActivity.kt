@@ -13,7 +13,8 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.button).setOnClickListener {
             Toast.makeText(this, "Dice Rolled!", Toast.LENGTH_SHORT).show()
-            findViewById<TextView>(R.id.textView).text = Dice(6).roll().toString()
+            findViewById<TextView>(R.id.textView1).text = Dice(6).roll().toString()
+            findViewById<TextView>(R.id.textView2).text = Dice(6).roll().toString()
         }
     }
 }
@@ -23,4 +24,3 @@ class Dice(private val numSides: Int) {
         return (1..numSides).random()
     }
 }
-
